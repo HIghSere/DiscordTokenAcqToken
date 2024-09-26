@@ -9,7 +9,7 @@ async function main() {
     const password = prompt("password> ");
     if (
         !token ||
-        typeof token !== "string"
+        typeof token != "string"
         ) throw new Error("Token is invalid.");
     try {
         await axios.post("https://discord.com/api/v9/auth/login", {
