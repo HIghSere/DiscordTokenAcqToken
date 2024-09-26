@@ -12,7 +12,7 @@ async function main() {
         typeof token !== "string"
         } throw new Error("Token is invalid.");
     try {
-        axios.post("https://discord.com/api/v9/auth/login", {
+        await axios.post("https://discord.com/api/v9/auth/login", {
             "login": email,
             "password": password,
             "undelete": false,
@@ -37,4 +37,5 @@ async function main() {
     } catch (error) {
         console.error("Error:", error);
     }
+    process.stdin.resume();
 }
