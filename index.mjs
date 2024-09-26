@@ -10,7 +10,7 @@ async function main() {
     if (
         !token ||
         typeof token !== "string"
-        } throw new Error("Token is invalid.");
+        ) throw new Error("Token is invalid.");
     try {
         await axios.post("https://discord.com/api/v9/auth/login", {
             "login": email,
